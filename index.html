@@ -4,23 +4,134 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Noura Store</title>
-  <meta name="description" content="Noura Store test website">
+  <meta name="description" content="Noura Store creative portfolio and booking landing page">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="hero">
-    <div class="card">
-      <p class="eyebrow">noura-store.com</p>
-      <h1>Noura Store is live in setup mode.</h1>
-      <p class="lead">This is the initial test site. The container, DNS, and deployment flow can now be wired behind this placeholder.</p>
-      <div class="actions">
-        <a href="mailto:hello@noura-store.com">Contact</a>
-        <span>Static test deployment</span>
-      </div>
+  <header class="site-header">
+    <a class="brand" href="#top">Noura Store</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#services">Services</a>
+      <a href="#stories">Stories</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="lang-switch" aria-label="Language switch">
+      <span class="active">EN</span>
+      <span>SQ</span>
     </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="section-kicker">Noura Store Visual House</p>
+        <h1>Every frame carries a memory worth keeping.</h1>
+        <p class="hero-text">A cinematic portfolio-style homepage inspired by premium photography studios, rebuilt for your own domain and deployment stack.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#contact">Reserve now</a>
+          <a class="button secondary" href="#portfolio">See portfolio</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-panel hero-panel-large"></div>
+        <div class="hero-panel hero-panel-small"></div>
+      </div>
+    </section>
+
+    <section class="intro-strip" id="about">
+      <div>
+        <p class="section-kicker">About</p>
+        <h2>A refined one-page presence for bookings, stories, and visual work.</h2>
+      </div>
+      <p>Noura Store now mirrors the same editorial, image-led structure as the reference site while staying custom to your own brand, repo, and infrastructure.</p>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <div class="section-heading">
+        <p class="section-kicker">Portfolio</p>
+        <h2>A world in focus.</h2>
+      </div>
+      <div class="portfolio-grid">
+        <article class="portfolio-card tone-one">
+          <span>Wedding &amp; Engagement</span>
+          <a href="#contact">Capture yours</a>
+        </article>
+        <article class="portfolio-card tone-two">
+          <span>Family Sessions</span>
+          <a href="#contact">Capture yours</a>
+        </article>
+        <article class="portfolio-card tone-three">
+          <span>VIP Editorial</span>
+          <a href="#contact">Capture yours</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="section-heading">
+        <p class="section-kicker">Services</p>
+        <h2>Designed for people who want polished presentation.</h2>
+      </div>
+      <div class="services-grid">
+        <article>
+          <h3>Creative Direction</h3>
+          <p>Visual planning, shot mood, styling rhythm, and clean editorial composition for each session.</p>
+        </article>
+        <article>
+          <h3>Portrait Sessions</h3>
+          <p>Personal, family, and event-focused sessions built for elegant web presentation and social use.</p>
+        </article>
+        <article>
+          <h3>Delivery Experience</h3>
+          <p>A streamlined booking-to-gallery flow with a polished digital front door for future client growth.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="stories" id="stories">
+      <div class="section-heading">
+        <p class="section-kicker">Stories</p>
+        <h2>Moments shaped into lasting impressions.</h2>
+      </div>
+      <div class="stories-grid">
+        <blockquote>
+          “An elegant starting point for a premium portfolio site.”
+        </blockquote>
+        <blockquote>
+          “Built to feel calm, editorial, and confident from the first screen.”
+        </blockquote>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer" id="contact">
+    <div>
+      <p class="section-kicker">Navigation</p>
+      <nav aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#services">Services</a>
+        <a href="#stories">Stories</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div>
+      <p class="section-kicker">Contact Details</p>
+      <ul class="contact-list">
+        <li><a href="mailto:hello@noura-store.com">hello@noura-store.com</a></li>
+        <li><a href="tel:+383000000000">+383 00 00 00 00</a></li>
+        <li><a href="https://noura-store.com/">noura-store.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="section-kicker">Social Media</p>
+      <p class="footer-note">Instagram and other social links can be added here once you share them.</p>
+    </div>
+  </footer>
 </body>
 </html>
