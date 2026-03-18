@@ -32,6 +32,11 @@ a {
   color: inherit;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 .site-header,
 .hero,
 .intro-strip,
@@ -185,8 +190,8 @@ h3 {
 .hero-panel-large {
   inset: 0 10% 8% 0;
   background:
-    linear-gradient(180deg, rgba(23, 16, 12, 0.06), rgba(23, 16, 12, 0.28)),
-    linear-gradient(135deg, #c7a287, #8d5b45);
+    linear-gradient(180deg, rgba(23, 16, 12, 0.04), rgba(23, 16, 12, 0.28)),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80");
 }
 
 .hero-panel-small {
@@ -196,8 +201,8 @@ h3 {
   height: 42%;
   border: 10px solid rgba(255, 247, 239, 0.88);
   background:
-    linear-gradient(180deg, rgba(255, 248, 240, 0.05), rgba(27, 23, 19, 0.26)),
-    linear-gradient(135deg, #f0d8be, #b6744f);
+    linear-gradient(180deg, rgba(255, 248, 240, 0.04), rgba(27, 23, 19, 0.22)),
+    url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80");
 }
 
 .intro-strip,
@@ -269,15 +274,69 @@ h3 {
 }
 
 .tone-one {
-  background: linear-gradient(180deg, rgba(18, 14, 10, 0.18), rgba(18, 14, 10, 0.42)), linear-gradient(135deg, #7d4f3b, #b88768);
+  background:
+    linear-gradient(180deg, rgba(18, 14, 10, 0.1), rgba(18, 14, 10, 0.46)),
+    url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80");
 }
 
 .tone-two {
-  background: linear-gradient(180deg, rgba(18, 14, 10, 0.16), rgba(18, 14, 10, 0.36)), linear-gradient(135deg, #90624c, #d9b391);
+  background:
+    linear-gradient(180deg, rgba(18, 14, 10, 0.1), rgba(18, 14, 10, 0.4)),
+    url("https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=80");
 }
 
 .tone-three {
-  background: linear-gradient(180deg, rgba(18, 14, 10, 0.16), rgba(18, 14, 10, 0.38)), linear-gradient(135deg, #5f3a2c, #a66f55);
+  background:
+    linear-gradient(180deg, rgba(18, 14, 10, 0.12), rgba(18, 14, 10, 0.44)),
+    url("https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80");
+}
+
+.tone-one,
+.tone-two,
+.tone-three {
+  background-size: cover;
+  background-position: center;
+}
+
+.feature-band {
+  width: min(1180px, calc(100% - 32px));
+  margin: 88px auto 0;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.feature-image,
+.gallery-shot {
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(60, 35, 22, 0.14);
+  background-size: cover;
+  background-position: center;
+}
+
+.feature-image {
+  min-height: 520px;
+  background-image:
+    linear-gradient(180deg, rgba(22, 16, 12, 0.04), rgba(22, 16, 12, 0.26)),
+    url("https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=1400&q=80");
+}
+
+.feature-copy {
+  padding: 32px;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  backdrop-filter: blur(18px);
+  display: grid;
+  align-content: center;
+  gap: 18px;
+}
+
+.feature-copy p:last-child {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
 }
 
 .services-grid {
@@ -307,6 +366,36 @@ h3 {
   line-height: 1.02;
 }
 
+.gallery-ribbon {
+  width: min(1180px, calc(100% - 32px));
+  margin: 88px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.gallery-shot {
+  min-height: 360px;
+}
+
+.shot-one {
+  background-image:
+    linear-gradient(180deg, rgba(22, 16, 12, 0.03), rgba(22, 16, 12, 0.2)),
+    url("https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=1000&q=80");
+}
+
+.shot-two {
+  background-image:
+    linear-gradient(180deg, rgba(22, 16, 12, 0.03), rgba(22, 16, 12, 0.24)),
+    url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=80");
+}
+
+.shot-three {
+  background-image:
+    linear-gradient(180deg, rgba(22, 16, 12, 0.03), rgba(22, 16, 12, 0.22)),
+    url("https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1000&q=80");
+}
+
 .site-footer {
   margin-top: 88px;
   padding: 36px 0 56px;
@@ -334,10 +423,12 @@ h3 {
 @media (max-width: 980px) {
   .hero,
   .intro-strip,
+  .feature-band,
   .site-footer,
   .portfolio-grid,
   .services-grid,
-  .stories-grid {
+  .stories-grid,
+  .gallery-ribbon {
     grid-template-columns: 1fr;
   }
 
