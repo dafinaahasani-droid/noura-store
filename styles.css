@@ -49,11 +49,12 @@ img {
 }
 
 .site-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
   gap: 24px;
-  padding: 24px 0;
+  padding: 28px 0 12px;
 }
 
 .brand,
@@ -69,12 +70,17 @@ img {
   font-family: "Cormorant Garamond", serif;
   font-size: 2rem;
   font-weight: 700;
+  justify-self: start;
+  line-height: 1;
 }
 
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: center;
+  gap: 22px;
+  justify-self: center;
+  padding-top: 4px;
 }
 
 .site-nav a,
@@ -91,6 +97,8 @@ img {
   display: flex;
   gap: 12px;
   font-size: 0.92rem;
+  justify-self: end;
+  padding-top: 4px;
 }
 
 .lang-switch .active {
@@ -439,12 +447,18 @@ h3 {
 
 @media (max-width: 720px) {
   .site-header {
-    align-items: start;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .site-nav {
+    justify-self: start;
     gap: 12px 18px;
+    justify-content: start;
+  }
+
+  .lang-switch {
+    justify-self: start;
   }
 
   .hero {
